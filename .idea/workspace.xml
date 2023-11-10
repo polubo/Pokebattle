@@ -4,13 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b549b10-a6a1-4e93-84ff-1e1dadf82bdd" name="Changes" comment="">
+    <list default="true" id="0b549b10-a6a1-4e93-84ff-1e1dadf82bdd" name="Changes" comment="att">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apresentacao/TesteUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apresentacao/TesteUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Ataque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ataque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Batalha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Batalha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Loja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Loja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LojaTransacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LojaTransacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Moeda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Moeda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Pokedex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PokedexAtaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PokedexAtaque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Transacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UsuarioMoeda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UsuarioMoeda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UsuarioTransacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UsuarioTransacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/pokemonPokedexAtaqueDeckUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/pokemonPokedexAtaqueDeckUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistencia/ConexaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistencia/ConexaoMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistencia/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistencia/UsuarioDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
@@ -25,11 +61,27 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/lucas/Downloads/mysql-connector-java-8.0.24/mysql-connector-java-8.0.24.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/lucas/Downloads/Pokebattle/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas\Downloads\Pokebattle\src\main\java\model" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,18 +90,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699643510410</updated>
-      <workItem from="1699643511497" duration="4000" />
+      <workItem from="1699643511497" duration="7560000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modal e persistencia criados e testados." />
+    <MESSAGE value="att" />
+    <option name="LAST_COMMIT_MESSAGE" value="att" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
