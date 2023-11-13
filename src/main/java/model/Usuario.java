@@ -8,6 +8,7 @@ public class Usuario {
     private String nivel;
     private Loja loja;
     private Deck deck;
+
     public Usuario() {
         super();
         id = 0;

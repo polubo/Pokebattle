@@ -5,16 +5,14 @@ public class TesteUsuario {
 
 //		TESTE DO SALVAR
 //		Usuario u = new Usuario();
-//		u.setNome("");
-//		u.setEmail("");
-//		u.setSenha("");
-//       u.setNivel("");
+//		u.setNome("Lais dos Santos Rosa");
+//		u.setEmail("Laisrosa@gmail.com");
+//		u.setSenha("123");
+//      u.setNivel("0");
 //
 //		UsuarioDAO uDAO = new UsuarioDAO();
 //		u = uDAO.salvar(u);
 //		System.out.println(u.toString());
-        // JUNIT
-
 
 //		TESTE DO EDITAR
 //		Usuario u = new Usuario();
