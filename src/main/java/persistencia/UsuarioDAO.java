@@ -45,13 +45,14 @@ public class UsuarioDAO {
 
     public void editar(Usuario usuario) {
         this.conexao.abrirConexao();
-        String sql = "UPDATE usuario SET nome = ?, email = ?, senha = ? WHERE id_usuario = ?";
+        String sql = "UPDATE usuario SET nome_usuario = ?, email_usuario = ?, senha_usuario = ?, nivel_usuario = ? WHERE id_usuario = ?";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql);
             statement.setString(1, usuario.getNome());
             statement.setString(2, usuario.getEmail());
             statement.setString(3, usuario.getSenha());
-            statement.setLong(4, usuario.getId());
+            statement.setString(4, usuario.getNivel());
+            statement.setLong(5, usuario.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -91,10 +92,10 @@ public class UsuarioDAO {
                 // ENTRA APENAS SE O SELECT RETORNOU ALGO
                 usuario = new Usuario();
                 usuario.setId(rs.getLong("id_usuario"));
-                usuario.setNome(rs.getString("nome"));
-                usuario.setEmail(rs.getString("email"));
-                usuario.setSenha(rs.getString("senha"));
-                usuario.setNivel(rs.getString("nivel"));
+                usuario.setNome(rs.getString("nome_usuario"));
+                usuario.setEmail(rs.getString("email_usuario"));
+                usuario.setSenha(rs.getString("senha_usuario"));
+                usuario.setNivel(rs.getString("nivel_usuario"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -119,10 +120,10 @@ public class UsuarioDAO {
                 // ENTRA APENAS SE O SELECT RETORNOU ALGO
                 usuario = new Usuario();
                 usuario.setId(rs.getLong("id_usuario"));
-                usuario.setNome(rs.getString("nome"));
-                usuario.setEmail(rs.getString("email"));
-                usuario.setSenha(rs.getString("senha"));
-                usuario.setNivel(rs.getString("nivel"));
+                usuario.setNome(rs.getString("nome_usuario"));
+                usuario.setEmail(rs.getString("email_usuario"));
+                usuario.setSenha(rs.getString("senha_usuario"));
+                usuario.setNivel(rs.getString("nivel_usuario"));
                 // ADICIONAMOS O USUARIO NA LISTA
                 listaUsuarios.add(usuario);
             }

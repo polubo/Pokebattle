@@ -2,7 +2,6 @@ package model;
 
 public class Pokedex {
     private long id;
-    private pokemonPokedexAtaqueDeckUsuario pokemonpokedexataquedeckusuario;
     private String nome;
     private String tipoPokemon;
     private String vidaPokemon;
@@ -10,20 +9,18 @@ public class Pokedex {
     public Pokedex() {
         super();
         id = 0;
-        pokemonpokedexataquedeckusuario = new pokemonPokedexAtaqueDeckUsuario();
         nome = "";
         tipoPokemon = "";
         vidaPokemon = "";
         danoPokemon = "";
     }
     public Pokedex(long id,
-                   pokemonPokedexAtaqueDeckUsuario pokemonpokedexataquedeckusuario,
+                   PokemonPokedexAtaqueDeckUsuario pokemonpokedexataquedeckusuario,
                    String nome,
                    String tipoPokemon,
                    String vidaPokemon,
                    String danoPokemon) {
         this.id = id;
-        this.pokemonpokedexataquedeckusuario = pokemonpokedexataquedeckusuario;
         this.nome = nome;
         this.tipoPokemon = tipoPokemon;
         this.vidaPokemon = vidaPokemon;
@@ -37,15 +34,6 @@ public class Pokedex {
     public void setId(long id) {
         this.id = id;
     }
-
-    public pokemonPokedexAtaqueDeckUsuario getPokemonpokedexataquedeckusuario() {
-        return pokemonpokedexataquedeckusuario;
-    }
-
-    public void setPokemonpokedexataquedeckusuario(pokemonPokedexAtaqueDeckUsuario pokemonpokedexataquedeckusuario) {
-        this.pokemonpokedexataquedeckusuario = pokemonpokedexataquedeckusuario;
-    }
-
     public String getNome() {
         return nome;
     }

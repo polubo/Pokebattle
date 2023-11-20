@@ -1,14 +1,13 @@
 package apresentacao;
-
 public class TesteUsuario {
     public static void main(String[] args) {
 
 //		TESTE DO SALVAR
 //		Usuario u = new Usuario();
-//		u.setNome("Lais dos Santos Rosa");
-//		u.setEmail("Laisrosa@gmail.com");
-//		u.setSenha("123");
-//      u.setNivel("0");
+//		u.setNome("");
+//		u.setEmail("");
+//		u.setSenha("");
+//		u.setNivel("");
 //
 //		UsuarioDAO uDAO = new UsuarioDAO();
 //		u = uDAO.salvar(u);
@@ -17,9 +16,10 @@ public class TesteUsuario {
 //		TESTE DO EDITAR
 //		Usuario u = new Usuario();
 //		u.setId(1);
-//		u.setNome("Renan Remor Oliveira");
-//		u.setEmail("renan.remor@gmail.com");
-//		u.setSenha("321");
+//		u.setNome("");
+//		u.setEmail("");
+//		u.setSenha("");
+//		u.setNivel("");
 //
 //		UsuarioDAO uDAO = new UsuarioDAO();
 //		uDAO.editar(u);
@@ -30,7 +30,7 @@ public class TesteUsuario {
 
 //		TESTE DO BUSCARPORID
 //		UsuarioDAO uDAO = new UsuarioDAO();
-//		Usuario usuario = uDAO.buscarPorId(2);
+//		Usuario usuario = uDAO.buscarPorId(3);
 //		if(usuario != null) {
 //			System.out.println(usuario.toString());
 //		} else {

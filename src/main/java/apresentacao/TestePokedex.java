@@ -3,12 +3,12 @@ package apresentacao;
 public class TestePokedex {
     public static void main(String[] args) {
 
-//		TESTE DO SALVAR
+//		  TESTE DO SALVAR
 //        Pokedex p = new Pokedex();
-//        p.setNome("");
-//        p.setTipoPokemon("");
-//        p.setVidaPokemon("");
-//        p.setDanoPokemon("");
+//        p.setNome("Charizard");
+//        p.setTipoPokemon("Fogo");
+//        p.setVidaPokemon("2230hp");
+//        p.setDanoPokemon("510");
 //
 //        PokedexDAO pDAO = new PokedexDAO();
 //        p = pDAO.salvar(p);
@@ -17,16 +17,17 @@ public class TestePokedex {
 //		TESTE DO EDITAR
 //		Pokedex p = new Pokedex();
 //		p.setId(1);
-//		p.setNome("Renan Remor Oliveira");
-//		p.setTipoPokemon("renan.remor@gmail.com");
+//		p.setNome("Renan");
+//		p.setTipoPokemon("lendario");
 //		p.setVidaPokemon("321");
-
+//        p.setDanoPokemon("10");
+//
 //		PokedexDAO pDAO = new PokedexDAO();
 //		pDAO.editar(p);
 
 //		TESTE DO EXCLUIR
 //		PokedexDAO pDAO = new PokedexDAO();
-//		pDAO.excluir(1);
+//		pDAO.excluir(3);
 
 //		TESTE DO BUSCARPORID
 //		PokedexDAO pDAO = new PokedexDAO();
@@ -34,7 +35,7 @@ public class TestePokedex {
 //		if(Pokedex != null) {
 //			System.out.println(Pokedex.toString());
 //		} else {
-//			System.out.println("Pokedex nao encontrado!");
+//			System.out.println("Pokemons nao encontrado!");
 //		}
 
 //		TESTE DO BUSCARTODOS

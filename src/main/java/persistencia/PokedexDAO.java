@@ -17,7 +17,7 @@ public class PokedexDAO {
 
     public Pokedex salvar(Pokedex pokedex) {
         this.conexao.abrirConexao();
-        String sql = "INSERT INTO pokedex VALUES(null, ?, ?, ?, ?)";
+        String sql = "INSERT INTO pokedex VALUES(null, null, ?, ?, ?, ?)";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             statement.setString(1, pokedex.getNome());
@@ -44,7 +44,7 @@ public class PokedexDAO {
 
     public void editar(Pokedex pokedex) {
         this.conexao.abrirConexao();
-        String sql = "UPDATE pokedex SET nome = ?, TipoPokemon = ?, VidaPokemon = ?, DanoPokemon ? =  WHERE id_pokedex = ?";
+        String sql = "UPDATE pokedex SET nome_pokemon = ?, tipo_pokemon = ?, vida_pokemon = ?, dano_pokemon = ? WHERE id_pokedex = ?";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql);
             statement.setString(1, pokedex.getNome());

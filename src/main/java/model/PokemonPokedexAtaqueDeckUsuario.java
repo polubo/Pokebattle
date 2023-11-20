@@ -1,6 +1,6 @@
 package model;
 
-public class pokemonPokedexAtaqueDeckUsuario {
+public class PokemonPokedexAtaqueDeckUsuario {
     private long id;
     private Pokedex pokedex;
     private String nomePokemon;
@@ -8,7 +8,7 @@ public class pokemonPokedexAtaqueDeckUsuario {
     private Ataque ataque;
     private Deck deck;
     private Usuario usuario;
-    public pokemonPokedexAtaqueDeckUsuario() {
+    public PokemonPokedexAtaqueDeckUsuario() {
         super();
         id = 0;
         pokedex = new Pokedex();
@@ -19,7 +19,7 @@ public class pokemonPokedexAtaqueDeckUsuario {
         usuario = new Usuario();
     }
 
-    public pokemonPokedexAtaqueDeckUsuario(long id,
+    public PokemonPokedexAtaqueDeckUsuario(long id,
                                            Pokedex pokedex,
                                            String nomePokemon,
                                            String nome,
