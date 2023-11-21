@@ -1,2 +1,2 @@
 # Pokebattle
-Integrador desenvolvido por: Lucas Bissolotti e Matheus Bordinhão.
+Integrador desenvolvido pelos alunos: Lucas Bissolotti e Matheus Bordinhão.
