@@ -17,7 +17,7 @@ public class LojaDAO {
 
     public Loja salvar(Loja loja) {
         this.conexao.abrirConexao();
-        String sql = "INSERT INTO ataque VALUES(null, ?, ?)";
+        String sql = "INSERT INTO loja VALUES(null, ?, ?)";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             statement.setString(1, loja.getPokemon());
