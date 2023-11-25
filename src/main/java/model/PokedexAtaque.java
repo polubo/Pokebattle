@@ -14,7 +14,6 @@ public class PokedexAtaque {
         nomePokemon = "";
         nome = "";
     }
-
     public PokedexAtaque(long id, Ataque ataque, Pokedex pokedex, String nomePokemon, String nome) {
         this.id = id;
         this.ataque = ataque;
@@ -22,7 +21,6 @@ public class PokedexAtaque {
         this.nomePokemon = nomePokemon;
         this.nome = nome;
     }
-
     public long getId() {
         return id;
     }
@@ -61,5 +59,15 @@ public class PokedexAtaque {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    @Override
+    public String toString() {
+        return "PokedexAtaque{" +
+                "id=" + id +
+                ", ataque=" + ataque +
+                ", pokedex=" + pokedex +
+                ", nomePokemon='" + nomePokemon + '\'' +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }

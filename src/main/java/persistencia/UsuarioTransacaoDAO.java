@@ -1,8 +1,6 @@
 package persistencia;
 
-import model.Bot;
-import model.Partida;
-import model.Usuario;
+import model.*;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,28 +8,26 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PartidaDAO {
+public class UsuarioTransacaoDAO {
     private ConexaoMysql conexao;
 
-    public PartidaDAO() {
+    public UsuarioTransacaoDAO() {
         this.conexao = new ConexaoMysql("root", "lucasgremio", "localhost", "3306", "pokemonbd");
     }
 
-    public Partida salvar(Partida partida) {
+    public UsuarioTransacao salvar(UsuarioTransacao usuarioTransacao) {
         this.conexao.abrirConexao();
-        String sql = "INSERT INTO partida VALUES(null, ?, ?, ?, ?)";
+        String sql = "INSERT INTO usuario_transacao VALUES(null, ?, ?)";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
-            statement.setString(1, partida.getResultado());
-            statement.setString(2, partida.getRecompensa());
-            statement.setLong(3, partida.getUsuario().getId());
-            statement.setLong(4, partida.getBot().getId());
+            statement.setLong(1, usuarioTransacao.getUsuario().getId());
+            statement.setLong(2, usuarioTransacao.getTransacao().getId());
             int linhasAfetadas = statement.executeUpdate();
             if (linhasAfetadas > 0) {
                 ResultSet rs = statement.getGeneratedKeys();
-                if (rs.next()) {
+                if(rs.next()) {
                     // SE ENTRAR AQUI � PQ RETORNOU UMA CHAVE GERADA NO BD
-                    partida.setId(rs.getLong(1));
+                    usuarioTransacao.setId(rs.getLong(1));
                 }
                 // OBJETIVO � PEGAR O ID GERADO NO BANCO
             }
@@ -41,19 +37,17 @@ public class PartidaDAO {
         } finally {
             this.conexao.fecharConexao();
         }
-        return partida;
+        return usuarioTransacao;
     }
 
-    public void editar(Partida partida) {
+    public void editar(UsuarioTransacao usuarioTransacao) {
         this.conexao.abrirConexao();
-        String sql = "UPDATE partida SET resultado = ?, recompensa = ?, id_usuario = ?, id_bot = ? WHERE id_partida = ?";
+        String sql = "UPDATE usuario_transacao SET id_usuario = ?, id_transacao = ? WHERE id_usuario_transacao = ?";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql);
-            statement.setString(1, partida.getResultado());
-            statement.setString(2, partida.getRecompensa());
-            statement.setLong(3, partida.getUsuario().getId());
-            statement.setLong(4, partida.getBot().getId());
-            statement.setLong(5, partida.getId());
+            statement.setLong(1, usuarioTransacao.getUsuario().getId());
+            statement.setLong(2, usuarioTransacao.getTransacao().getId());
+            statement.setLong(3, usuarioTransacao.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -65,7 +59,7 @@ public class PartidaDAO {
     // DELETE FROM usuario WHERE id_usuario = ?
     public void excluir(long id) {
         this.conexao.abrirConexao();
-        String sql = "DELETE FROM partida WHERE id_partida = ?";
+        String sql = "DELETE FROM usuario_transacao WHERE id_usuario_transacao = ?";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql);
             statement.setLong(1, id);
@@ -78,10 +72,10 @@ public class PartidaDAO {
     }
 
     // BUSCAR UM USUARIO PELO ID
-    public Partida buscarPorId(long id) {
-        Partida partida = null;
+    public UsuarioTransacao buscarPorId(long id) {
+        UsuarioTransacao usuarioTransacao = null;
         this.conexao.abrirConexao();
-        String sql = "SELECT * FROM partida WHERE id_partida = ?";
+        String sql = "SELECT * FROM usuario_transacao WHERE id_usuario_transacao = ?";
         PreparedStatement statement;
         try {
             statement = conexao.getConexao().prepareStatement(sql);
@@ -91,56 +85,52 @@ public class PartidaDAO {
             // PRECISAMOS CONVERTER UM RESULTSET EM UM OBJETO USUARIO
             if (rs.next()) {
                 // ENTRA APENAS SE O SELECT RETORNOU ALGO
-                partida = new Partida();
-                partida.setId(rs.getLong("id_partida"));
-                partida.setResultado(rs.getString("resultado"));
-                partida.setRecompensa(rs.getString("recompensa"));
+                usuarioTransacao = new UsuarioTransacao();
+                usuarioTransacao.setId(rs.getLong("id_usuario_transacao"));
                 UsuarioDAO usuarioDAO = new UsuarioDAO();
                 Usuario usuario = usuarioDAO.buscarPorId(rs.getLong("id_usuario"));
-                partida.setUsuario(usuario);
-                BotDAO botDAO = new BotDAO();
-                Bot bot = botDAO.buscarPorId(rs.getLong("id_bot"));
-                partida.setBot(bot);
+                usuarioTransacao.setUsuario(usuario);
+                TransacaoDAO transacaoDAO = new TransacaoDAO();
+                Transacao transacao = transacaoDAO.buscarPorId(rs.getLong("id_transacao"));
+                usuarioTransacao.setTransacao(transacao);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             this.conexao.fecharConexao();
         }
-        return partida;
+        return usuarioTransacao;
     }
 
-    public List<Partida> buscarTodos() {
-        List<Partida> listaPartida = new ArrayList<>();
-        Partida partida = null;
+    public List<UsuarioTransacao> buscarTodos() {
+        List<UsuarioTransacao> listaUsuarioTransacao= new ArrayList<>();
+        UsuarioTransacao usuarioTransacao = null;
         this.conexao.abrirConexao();
-        String sql = "SELECT * FROM partida";
+        String sql = "SELECT * FROM usuario_transacao";
         PreparedStatement statement;
         try {
             statement = conexao.getConexao().prepareStatement(sql);
             ResultSet rs = statement.executeQuery();
 
             // PRECISAMOS CONVERTER UM RESULTSET EM UM OBJETO USUARIO
-            while (rs.next()) {
+            while(rs.next()) {
                 // ENTRA APENAS SE O SELECT RETORNOU ALGO
-                partida = new Partida();
-                partida.setId(rs.getLong("id_partida"));
-                partida.setResultado(rs.getString("resultado"));
-                partida.setRecompensa(rs.getString("recompensa"));
+                usuarioTransacao = new UsuarioTransacao();
+                usuarioTransacao.setId(rs.getLong("id_usuario_transacao"));
                 UsuarioDAO usuarioDAO = new UsuarioDAO();
                 Usuario usuario = usuarioDAO.buscarPorId(rs.getLong("id_usuario"));
-                partida.setUsuario(usuario);
-                BotDAO botDAO = new BotDAO();
-                Bot bot = botDAO.buscarPorId(rs.getLong("id_bot"));
-                partida.setBot(bot);
+                usuarioTransacao.setUsuario(usuario);
+                TransacaoDAO transacaoDAO = new TransacaoDAO();
+                Transacao transacao = transacaoDAO.buscarPorId(rs.getLong("id_transacao"));
+                usuarioTransacao.setTransacao(transacao);
                 // ADICIONAMOS O USUARIO NA LISTA
-                listaPartida.add(partida);
+                listaUsuarioTransacao.add(usuarioTransacao);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             this.conexao.fecharConexao();
         }
-        return listaPartida;
+        return listaUsuarioTransacao;
     }
 }

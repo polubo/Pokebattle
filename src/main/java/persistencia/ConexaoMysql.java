@@ -54,5 +54,4 @@ public class ConexaoMysql {
             e.printStackTrace();
         }
     }
-
 }

@@ -1,4 +1,5 @@
 package apresentacao;
+
 public class TesteUsuario {
     public static void main(String[] args) {
 
@@ -26,7 +27,7 @@ public class TesteUsuario {
 
 //		TESTE DO EXCLUIR
 //		UsuarioDAO uDAO = new UsuarioDAO();
-//		uDAO.excluir(1);
+//		uDAO.excluir(2);
 
 //		TESTE DO BUSCARPORID
 //		UsuarioDAO uDAO = new UsuarioDAO();

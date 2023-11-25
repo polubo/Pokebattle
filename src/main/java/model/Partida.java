@@ -1,11 +1,15 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Partida {
     private long id;
-    private Usuario usuario;
-    private Bot bot;
     private String resultado;
     private String recompensa;
+    private Usuario usuario;
+    private Bot bot;
+    private List<Batalha> listBatalha;
     public Partida() {
         super();
         id = 0;
@@ -13,13 +17,15 @@ public class Partida {
         recompensa = "";
         usuario = new Usuario();
         bot = new Bot();
+        listBatalha = new ArrayList<>();
     }
-    public Partida(long id, Usuario usuario, Bot bot, String resultado, String recompensa) {
+    public Partida(long id, String resultado, String recompensa, Usuario usuario, Bot bot, List<Batalha> listBatalha) {
         this.id = id;
-        this.usuario = usuario;
-        this.bot = bot;
         this.resultado = resultado;
         this.recompensa = recompensa;
+        this.usuario = usuario;
+        this.bot = bot;
+        this.listBatalha = listBatalha;
     }
     public long getId() {
         return id;
@@ -27,6 +33,22 @@ public class Partida {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
+    }
+
+    public String getRecompensa() {
+        return recompensa;
+    }
+
+    public void setRecompensa(String recompensa) {
+        this.recompensa = recompensa;
     }
 
     public Usuario getUsuario() {
@@ -45,19 +67,22 @@ public class Partida {
         this.bot = bot;
     }
 
-    public String getResultado() {
-        return resultado;
+    public List<Batalha> getListBatalha() {
+        return listBatalha;
     }
 
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
+    public void setListBatalha(List<Batalha> listBatalha) {
+        this.listBatalha = listBatalha;
     }
-
-    public String getRecompensa() {
-        return recompensa;
-    }
-
-    public void setRecompensa(String recompensa) {
-        this.recompensa = recompensa;
+    @Override
+    public String toString() {
+        return "Partida{" +
+                "id=" + id +
+                ", resultado='" + resultado + '\'' +
+                ", recompensa='" + recompensa + '\'' +
+                ", usuario=" + usuario +
+                ", bot=" + bot +
+                ", listBatalha=" + listBatalha +
+                '}';
     }
 }

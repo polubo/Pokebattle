@@ -1,11 +1,17 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pokedex {
     private long id;
     private String nome;
     private String tipoPokemon;
     private String vidaPokemon;
     private String danoPokemon;
+    private List<PokedexAtaque> listPokedexAtaque;
+    private List<PokemonPokedexAtaqueDeckUsuario> listPokemonPokedexAtaqueDeckUsuario;
+
     public Pokedex() {
         super();
         id = 0;
@@ -13,20 +19,24 @@ public class Pokedex {
         tipoPokemon = "";
         vidaPokemon = "";
         danoPokemon = "";
+        listPokedexAtaque = new ArrayList<>();
+        listPokemonPokedexAtaqueDeckUsuario = new ArrayList<>();
     }
     public Pokedex(long id,
-                   PokemonPokedexAtaqueDeckUsuario pokemonpokedexataquedeckusuario,
                    String nome,
                    String tipoPokemon,
                    String vidaPokemon,
-                   String danoPokemon) {
+                   String danoPokemon,
+                   List<PokedexAtaque> listPokedexAtaque,
+                   List<PokemonPokedexAtaqueDeckUsuario> listPokemonPokedexAtaqueDeckUsuario) {
         this.id = id;
         this.nome = nome;
         this.tipoPokemon = tipoPokemon;
         this.vidaPokemon = vidaPokemon;
         this.danoPokemon = danoPokemon;
+        this.listPokedexAtaque = listPokedexAtaque;
+        this.listPokemonPokedexAtaqueDeckUsuario = listPokemonPokedexAtaqueDeckUsuario;
     }
-
     public long getId() {
         return id;
     }
@@ -34,6 +44,7 @@ public class Pokedex {
     public void setId(long id) {
         this.id = id;
     }
+
     public String getNome() {
         return nome;
     }
@@ -64,5 +75,32 @@ public class Pokedex {
 
     public void setDanoPokemon(String danoPokemon) {
         this.danoPokemon = danoPokemon;
+    }
+
+    public List<PokedexAtaque> getListPokedexAtaque() {
+        return listPokedexAtaque;
+    }
+
+    public void setListPokedexAtaque(List<PokedexAtaque> listPokedexAtaque) {
+        this.listPokedexAtaque = listPokedexAtaque;
+    }
+    public List<PokemonPokedexAtaqueDeckUsuario> getListPokemonPokedexAtaqueDeckUsuario() {
+        return listPokemonPokedexAtaqueDeckUsuario;
+    }
+
+    public void setListPokemonPokedexAtaqueDeckUsuario(List<PokemonPokedexAtaqueDeckUsuario> listPokemonPokedexAtaqueDeckUsuario) {
+        this.listPokemonPokedexAtaqueDeckUsuario = listPokemonPokedexAtaqueDeckUsuario;
+    }
+    @Override
+    public String toString() {
+        return "Pokedex{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", tipoPokemon='" + tipoPokemon + '\'' +
+                ", vidaPokemon='" + vidaPokemon + '\'' +
+                ", danoPokemon='" + danoPokemon + '\'' +
+                ", listPokedexAtaque=" + listPokedexAtaque +
+                ", listPokemonPokedexAtaqueDeckUsuario=" + listPokemonPokedexAtaqueDeckUsuario +
+                '}';
     }
 }

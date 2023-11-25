@@ -90,5 +90,17 @@ public class PokemonPokedexAtaqueDeckUsuario {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+    @Override
+    public String toString() {
+        return "PokemonPokedexAtaqueDeckUsuario{" +
+                "id=" + id +
+                ", pokedex=" + pokedex +
+                ", nomePokemon='" + nomePokemon + '\'' +
+                ", nome='" + nome + '\'' +
+                ", ataque=" + ataque +
+                ", deck=" + deck +
+                ", usuario=" + usuario +
+                '}';
+    }
 }
 

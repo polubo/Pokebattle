@@ -1,6 +1,8 @@
 
 package persistencia;
 
+import model.Deck;
+import model.Loja;
 import model.Usuario;
 
 import java.sql.PreparedStatement;
@@ -18,13 +20,16 @@ public class UsuarioDAO {
 
     public Usuario salvar(Usuario usuario) {
         this.conexao.abrirConexao();
-        String sql = "INSERT INTO usuario VALUES(null, ?, ?, ?, ?, null, null)";
+        String sql = "INSERT INTO usuario VALUES(null, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             statement.setString(1, usuario.getNome());
             statement.setString(2, usuario.getEmail());
             statement.setString(3, usuario.getSenha());
             statement.setString(4, usuario.getNivel());
+            statement.setLong(5, usuario.getLoja().getId());
+            statement.setLong(6, usuario.getDeck().getId());
+
             int linhasAfetadas = statement.executeUpdate();
             if (linhasAfetadas > 0) {
                 ResultSet rs = statement.getGeneratedKeys();
@@ -45,14 +50,16 @@ public class UsuarioDAO {
 
     public void editar(Usuario usuario) {
         this.conexao.abrirConexao();
-        String sql = "UPDATE usuario SET nome_usuario = ?, email_usuario = ?, senha_usuario = ?, nivel_usuario = ? WHERE id_usuario = ?";
+        String sql = "UPDATE usuario SET nome_usuario = ?, email_usuario = ?, senha_usuario = ?, nivel_usuario = ?, id_loja = ?, id_deck = ? WHERE id_usuario = ?";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql);
             statement.setString(1, usuario.getNome());
             statement.setString(2, usuario.getEmail());
             statement.setString(3, usuario.getSenha());
             statement.setString(4, usuario.getNivel());
-            statement.setLong(5, usuario.getId());
+            statement.setLong(5, usuario.getLoja().getId());
+            statement.setLong(6, usuario.getDeck().getId());
+            statement.setLong(7, usuario.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -96,6 +103,12 @@ public class UsuarioDAO {
                 usuario.setEmail(rs.getString("email_usuario"));
                 usuario.setSenha(rs.getString("senha_usuario"));
                 usuario.setNivel(rs.getString("nivel_usuario"));
+                LojaDAO lojaDAO = new LojaDAO();
+                Loja loja = lojaDAO.buscarPorId(rs.getLong("id_loja"));
+                usuario.setLoja(loja);
+                DeckDAO deckDAO = new DeckDAO();
+                Deck deck = deckDAO.buscarPorId(rs.getLong("id_deck"));
+                usuario.setDeck(deck);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -124,6 +137,12 @@ public class UsuarioDAO {
                 usuario.setEmail(rs.getString("email_usuario"));
                 usuario.setSenha(rs.getString("senha_usuario"));
                 usuario.setNivel(rs.getString("nivel_usuario"));
+                LojaDAO lojaDAO = new LojaDAO();
+                Loja loja = lojaDAO.buscarPorId(rs.getLong("id_loja"));
+                usuario.setLoja(loja);
+                DeckDAO deckDAO = new DeckDAO();
+                Deck deck = deckDAO.buscarPorId(rs.getLong("id_deck"));
+                usuario.setDeck(deck);
                 // ADICIONAMOS O USUARIO NA LISTA
                 listaUsuarios.add(usuario);
             }

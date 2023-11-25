@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
     private long id;
     private String nome;
@@ -8,6 +11,10 @@ public class Usuario {
     private String nivel;
     private Loja loja;
     private Deck deck;
+    private List<Partida> listPartida;
+    private List<UsuarioMoeda> listUsuarioMoeda;
+    private List<UsuarioTransacao> listUsuarioTransacao;
+    private List<PokemonPokedexAtaqueDeckUsuario> listPokemonPokedexAtaqueDeckUsuario;
 
     public Usuario() {
         super();
@@ -18,8 +25,22 @@ public class Usuario {
         nivel = "";
         loja = new Loja();
         deck = new Deck();
+        listPartida = new ArrayList<>();
+        listUsuarioMoeda = new ArrayList<>();
+        listUsuarioTransacao = new ArrayList<>();
+        listPokemonPokedexAtaqueDeckUsuario = new ArrayList<>();
     }
-    public Usuario(long id, String nome, String email, String senha, String nivel, Loja loja, Deck deck) {
+    public Usuario(long id,
+                   String nome,
+                   String email,
+                   String senha,
+                   String nivel,
+                   Loja loja,
+                   Deck deck,
+                   List<Partida> listPartida,
+                   List<UsuarioMoeda> listUsuarioMoeda,
+                   List<UsuarioTransacao> listUsuarioTransacao,
+                   List<PokemonPokedexAtaqueDeckUsuario> listPokemonPokedexAtaqueDeckUsuario) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -27,6 +48,10 @@ public class Usuario {
         this.nivel = nivel;
         this.loja = loja;
         this.deck = deck;
+        this.listPartida = listPartida;
+        this.listUsuarioMoeda = listUsuarioMoeda;
+        this.listUsuarioTransacao = listUsuarioTransacao;
+        this.listPokemonPokedexAtaqueDeckUsuario = listPokemonPokedexAtaqueDeckUsuario;
     }
     public long getId() {
         return id;
@@ -83,6 +108,37 @@ public class Usuario {
     public void setDeck(Deck deck) {
         this.deck = deck;
     }
+
+    public List<Partida> getListPartida() {
+        return listPartida;
+    }
+
+    public void setListPartida(List<Partida> listPartida) {
+        this.listPartida = listPartida;
+    }
+
+    public List<UsuarioMoeda> getListUsuarioMoeda() {
+        return listUsuarioMoeda;
+    }
+
+    public void setListUsuarioMoeda(List<UsuarioMoeda> listUsuarioMoeda) {
+        this.listUsuarioMoeda = listUsuarioMoeda;
+    }
+
+    public List<UsuarioTransacao> getListUsuarioTransacao() {
+        return listUsuarioTransacao;
+    }
+
+    public void setListUsuarioTransacao(List<UsuarioTransacao> listUsuarioTransacao) {
+        this.listUsuarioTransacao = listUsuarioTransacao;
+    }
+    public List<PokemonPokedexAtaqueDeckUsuario> getListPokemonPokedexAtaqueDeckUsuario() {
+        return listPokemonPokedexAtaqueDeckUsuario;
+    }
+
+    public void setListPokemonPokedexAtaqueDeckUsuario(List<PokemonPokedexAtaqueDeckUsuario> listPokemonPokedexAtaqueDeckUsuario) {
+        this.listPokemonPokedexAtaqueDeckUsuario = listPokemonPokedexAtaqueDeckUsuario;
+    }
     @Override
     public String toString() {
         return "Usuario{" +
@@ -93,8 +149,10 @@ public class Usuario {
                 ", nivel='" + nivel + '\'' +
                 ", loja=" + loja +
                 ", deck=" + deck +
+                ", listPartida=" + listPartida +
+                ", listUsuarioMoeda=" + listUsuarioMoeda +
+                ", listUsuarioTransacao=" + listUsuarioTransacao +
+                ", listPokemonPokedexAtaqueDeckUsuario=" + listPokemonPokedexAtaqueDeckUsuario +
                 '}';
     }
 }
-
-

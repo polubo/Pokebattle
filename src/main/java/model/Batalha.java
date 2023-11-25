@@ -38,4 +38,12 @@ public class Batalha {
     public void setDeck(Deck deck) {
         this.deck = deck;
     }
+    @Override
+    public String toString() {
+        return "Batalha{" +
+                "id=" + id +
+                ", partida=" + partida +
+                ", deck=" + deck +
+                '}';
+    }
 }

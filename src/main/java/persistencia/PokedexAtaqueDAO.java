@@ -1,5 +1,7 @@
 package persistencia;
 
+import model.Ataque;
+import model.Pokedex;
 import model.PokedexAtaque;
 
 import java.sql.PreparedStatement;
@@ -17,11 +19,13 @@ public class PokedexAtaqueDAO {
 
     public PokedexAtaque salvar(PokedexAtaque pokedexAtaque) {
         this.conexao.abrirConexao();
-        String sql = "INSERT INTO ataque VALUES(null, null, null, ?, ?)";
+        String sql = "INSERT INTO ataque VALUES(null, ?, ?, ?, ?)";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
-            statement.setString(1, pokedexAtaque.getNomePokemon());
-            statement.setString(2, pokedexAtaque.getNome());
+            statement.setLong(1, pokedexAtaque.getAtaque().getId());
+            statement.setLong(2, pokedexAtaque.getPokedex().getId());
+            statement.setString(3, pokedexAtaque.getNomePokemon());
+            statement.setString(4, pokedexAtaque.getNome());
             int linhasAfetadas = statement.executeUpdate();
             if (linhasAfetadas > 0) {
                 ResultSet rs = statement.getGeneratedKeys();
@@ -42,12 +46,14 @@ public class PokedexAtaqueDAO {
 
     public void editar(PokedexAtaque pokedexAtaque) {
         this.conexao.abrirConexao();
-        String sql = "UPDATE pokedex_ataque SET nome_pokemon = ?, nome = ? WHERE id_pokedex_ataque = ?";
+        String sql = "UPDATE pokedex_ataque SET id_ataque = ?, id_pokedex = ?, nome_pokemon = ?, nome = ? WHERE id_pokedex_ataque = ?";
         try {
             PreparedStatement statement = conexao.getConexao().prepareStatement(sql);
-            statement.setString(1, pokedexAtaque.getNomePokemon());
-            statement.setString(2, pokedexAtaque.getNome());
-            statement.setLong(3, pokedexAtaque.getId());
+            statement.setLong(1, pokedexAtaque.getAtaque().getId());
+            statement.setLong(2, pokedexAtaque.getPokedex().getId());
+            statement.setString(3, pokedexAtaque.getNomePokemon());
+            statement.setString(4, pokedexAtaque.getNome());
+            statement.setLong(5, pokedexAtaque.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -87,6 +93,12 @@ public class PokedexAtaqueDAO {
                 // ENTRA APENAS SE O SELECT RETORNOU ALGO
                 pokedexAtaque = new PokedexAtaque();
                 pokedexAtaque.setId(rs.getLong("id_pokedex_ataque"));
+                AtaqueDAO ataqueDAO = new AtaqueDAO();
+                Ataque ataque = ataqueDAO.buscarPorId(rs.getLong("id_ataque"));
+                pokedexAtaque.setAtaque(ataque);
+                PokedexDAO pokedexDAO = new PokedexDAO();
+                Pokedex pokedex = pokedexDAO.buscarPorId(rs.getLong("id_pokedex"));
+                pokedexAtaque.setPokedex(pokedex);
                 pokedexAtaque.setNomePokemon(rs.getString("nome_pokemon"));
                 pokedexAtaque.setNome(rs.getString("nome"));
             }
@@ -113,6 +125,12 @@ public class PokedexAtaqueDAO {
                 // ENTRA APENAS SE O SELECT RETORNOU ALGO
                 pokedexAtaque = new PokedexAtaque();
                 pokedexAtaque.setId(rs.getLong("id_pokedex_ataque"));
+                AtaqueDAO ataqueDAO = new AtaqueDAO();
+                Ataque ataque = ataqueDAO.buscarPorId(rs.getLong("id_ataque"));
+                pokedexAtaque.setAtaque(ataque);
+                PokedexDAO pokedexDAO = new PokedexDAO();
+                Pokedex pokedex = pokedexDAO.buscarPorId(rs.getLong("id_pokedex"));
+                pokedexAtaque.setPokedex(pokedex);
                 pokedexAtaque.setNomePokemon(rs.getString("nome_pokemon"));
                 pokedexAtaque.setNome(rs.getString("nome"));
                 // ADICIONAMOS O USUARIO NA LISTA
