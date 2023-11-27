@@ -97,7 +97,6 @@ public class AtaqueDAO {
         }
         return ataque;
     }
-
     public List<Ataque> buscarTodos() {
         List<Ataque> listaAtaque= new ArrayList<>();
         Ataque ataque = null;

@@ -10,7 +10,7 @@ public class TesteUsuario {
 
 //		TESTE DO SALVAR
 		Usuario u = new Usuario();
-		u.setNome("test11e");
+		u.setNome("test1122e");
 		u.setEmail("test1e1@gmail.com");
 		u.setSenha("11123");
 		u.setNivel("1101");

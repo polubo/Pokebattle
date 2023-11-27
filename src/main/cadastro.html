@@ -8,14 +8,14 @@
           crossorigin="anonymous"
           referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="assets/css/style_login.css">
-    <title>Login Pokebattle</title>
+    <title>Cadastro Pokebattle</title>
 </head>
 <body>
 <main id="container">
-    <form id="login_form">
+    <form id="login_form" action="config.php" method="post">
         <!-- FORM HEADER -->
         <div id="form_header">
-            <h1>Login</h1>
+            <h1>Cadastro</h1>
             <i id="mode_icon" class="fa-solid fa-moon"></i>
         </div>
 
@@ -70,19 +70,11 @@
                         <input type="password" id="senha" name="senha">
                     </div>
                 </label>
-
-                <!-- FORGOT PASSWORD -->
-                <div id="forgot_password">
-                    <a href="#">
-                        Esqueceu sua senha?
-                    </a>
-                </div>
             </div>
         </div>
 
         <!-- LOGIN BUTTON -->
-        <button type="submit" id="login_button" onclick="return logar()">Login</button>
-
+        <button type="submit" id="login_button" onclick="return logar()">Cadastre-se</button>
     </form>
 </main>
 

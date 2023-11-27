@@ -374,7 +374,7 @@ body {
 .navbar-link {
     padding: 12px 25px;
     text-transform: uppercase;
-    font-size: var(--fontSize-7);
+    font-size: var(--fontSize-5);
     font-weight: var(--weight-semiBold);
     color: var(--text-white);
 }
@@ -965,7 +965,7 @@ body {
     .navbar-item,
     .navbar-item:last-child { border: none; }
 
-    .navbar-list { display: flex; }
+    .navbar-list { display: flex; margin-left: 35px; }
 
     .header .btn {
         display: grid;
