@@ -1,35 +1,30 @@
 package apresentacao;
 
-import model.Deck;
-import model.Loja;
-import model.Usuario;
-import persistencia.UsuarioDAO;
-
 public class TesteUsuario {
     public static void main(String[] args) {
 
 //		TESTE DO SALVAR
-		Usuario u = new Usuario();
-		u.setNome("test1122e");
-		u.setEmail("test1e1@gmail.com");
-		u.setSenha("11123");
-		u.setNivel("1101");
-
-		long idLoja = 1; // ID da loja
-		long idDeck = 1; // ID do deck
-
-		Loja loja = new Loja();
-		loja.setId(idLoja);
-
-		Deck deck = new Deck();
-		deck.setId(idDeck);
-
-		u.setLoja(loja);
-		u.setDeck(deck);
-
-		UsuarioDAO uDAO = new UsuarioDAO();
-		u = uDAO.salvar(u);
-		System.out.println(u.toString());
+//		Usuario u = new Usuario();
+//		u.setNome("test1122e");
+//		u.setEmail("test1e1@gmail.com");
+//		u.setSenha("11123");
+//		u.setNivel("1101");
+//
+//		long idLoja = 1; // ID da loja
+//		long idDeck = 1; // ID do deck
+//
+//		Loja loja = new Loja();
+//		loja.setId(idLoja);
+//
+//		Deck deck = new Deck();
+//		deck.setId(idDeck);
+//
+//		u.setLoja(loja);
+//		u.setDeck(deck);
+//
+//		UsuarioDAO uDAO = new UsuarioDAO();
+//		u = uDAO.salvar(u);
+//		System.out.println(u.toString());
 
 
 //		TESTE DO EDITAR
@@ -45,7 +40,7 @@ public class TesteUsuario {
 
 //		TESTE DO EXCLUIR
 //		UsuarioDAO uDAO = new UsuarioDAO();
-//		uDAO.excluir(1);
+//		uDAO.excluir(2);
 
 //		TESTE DO BUSCARPORID
 //		UsuarioDAO uDAO = new UsuarioDAO();
