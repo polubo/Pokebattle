@@ -12,7 +12,7 @@
 </head>
 <body>
 <main id="container">
-    <form id="login_form" action="login.php" method="post">
+    <form id="login_form" action="validacao_login.php" method="post">
         <!-- FORM HEADER -->
         <div id="form_header">
             <h1>Login</h1>

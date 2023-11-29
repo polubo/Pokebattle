@@ -28,8 +28,13 @@ if($qtd > 0){
         print "<td>".$row->id_loja."</td>";
         print "<td>".$row->id_deck."</td>";
         print "<td>   
-                <button onclick=\"location.href'?page=editar&id=".$row-> id_usuario. "';\" class='btn btn-success'>Editar</button>
-                <button class='btn btn-danger'>Excluir</button>
+                <button onclick=\"location.href='?page=editar&id=".$row->id_usuario."';\"class='btn 
+                btn-success'>Editar</button>
+              
+                <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){
+                 location.href='?page=salvar&acao=excluir&id=".$row->id_usuario."';}else{false;}\"
+                 class='btn btn-danger'>
+                 Excluir</button>    
                 </td>";
         print "</tr>";
     }
@@ -38,4 +43,5 @@ if($qtd > 0){
     print "<p class='alert alert-danger'>Não encontrou resultados!</p>";
 }
 ?>
+
 

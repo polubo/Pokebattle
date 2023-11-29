@@ -72,15 +72,15 @@
                         include ("cadastro.php");
                         break;
                     case "listar":
-                        include ("listarUsuario.php");
+                        include("listar_usuario.php");
                         break;
                     case "salvar";
-                        include ("salvarUsuario.php");
+                        include("UsuarioDAO.php");
                         break;
                     case "editar";
-                        include("editarUsuario.php");
+                        include("editar_usuario.php");
                     default:
-                        print "<h1>Bem vindos!</h1>";
+                        print "<h1></h1>";
                 }
                 ?>
             </div>
