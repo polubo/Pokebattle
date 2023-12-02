@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b549b10-a6a1-4e93-84ff-1e1dadf82bdd" name="Changes" comment="Crud do usuario finalizado - acrescentar inner join e continuação do site">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/assets/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/assets/imgs/body-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/UsuarioDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/UsuarioDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/cadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/cadastro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/editar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/editar_usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/listar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/listar_usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;polubo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2cb76554-1ad5-4219-acd2-ca597598e069" />
+        <option name="url" value="https://github.com/polubo/Pokebattle.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2Xzt03x4JeTaomCRQKclPSoMFcD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lucas/OneDrive/Área de Trabalho/Pokebattle&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lucas/Downloads/Pokebattle/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src" />
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\assets\imgs" />
+      <recent name="C:\Users\lucas\Downloads\Pokebattle\src\main\java\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\controllers" />
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main" />
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\assets\imgs" />
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\views" />
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Integrador" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Integrador" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b549b10-a6a1-4e93-84ff-1e1dadf82bdd" name="Changes" comment="" />
+      <created>1699643510410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699643510410</updated>
+      <workItem from="1699643511497" duration="7560000" />
+      <workItem from="1700499403674" duration="9770000" />
+      <workItem from="1700509748281" duration="2389000" />
+      <workItem from="1700587353270" duration="11755000" />
+      <workItem from="1700599957726" duration="1033000" />
+      <workItem from="1700757670804" duration="9065000" />
+      <workItem from="1700845100714" duration="4306000" />
+      <workItem from="1700852825091" duration="25595000" />
+      <workItem from="1700934575250" duration="2694000" />
+      <workItem from="1700950917162" duration="3987000" />
+      <workItem from="1701043238363" duration="8475000" />
+      <workItem from="1701051748131" duration="5623000" />
+      <workItem from="1701057460189" duration="97000" />
+      <workItem from="1701057579735" duration="247000" />
+      <workItem from="1701191563600" duration="26451000" />
+      <workItem from="1701276484681" duration="15842000" />
+      <workItem from="1701466654321" duration="17776000" />
+      <workItem from="1701485872738" duration="10633000" />
+    </task>
+    <task id="LOCAL-00001" summary="att">
+      <option name="closed" value="true" />
+      <created>1700512539430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700512539430</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Criação do website e página de cadastro -html e css">
+      <option name="closed" value="true" />
+      <created>1700598814800</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700598814800</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Parte persistencia finalizda.">
+      <option name="closed" value="true" />
+      <created>1700767712475</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700767712477</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pacote model e persistencia refeitos">
+      <option name="closed" value="true" />
+      <created>1700880245315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700880245315</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Testes finalizados na criação de um usuario">
+      <option name="closed" value="true" />
+      <created>1700955471258</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700955471258</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Atualização referente a apresentacao">
+      <option name="closed" value="true" />
+      <created>1701057757373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701057757373</updated>
+    </task>
+    <task id="LOCAL-00007" summary="controllers revisar">
+      <option name="closed" value="true" />
+      <created>1701222132290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701222132290</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Crud do usuario finalizado - acrescentar inner join e continuação do site">
+      <option name="closed" value="true" />
+      <created>1701293639877</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701293639877</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modal e persistencia criados e testados." />
+    <MESSAGE value="att" />
+    <MESSAGE value="Criação do website e página de cadastro -html e css" />
+    <MESSAGE value="Parte persistencia finalizda." />
+    <MESSAGE value="Pacote model e persistencia refeitos" />
+    <MESSAGE value="Testes finalizados na criação de um usuario" />
+    <MESSAGE value="Atualização referente a apresentacao" />
+    <MESSAGE value="controllers revisar" />
+    <MESSAGE value="Crud do usuario finalizado - acrescentar inner join e continuação do site" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crud do usuario finalizado - acrescentar inner join e continuação do site" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/main/controllers/listar_usuario.php</url>
+          <line>49</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

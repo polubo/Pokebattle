@@ -56,6 +56,13 @@
                     </div>
                 </label>
 
+                <!--Criar conta-->
+                <div class="separator">
+                    <p class="change_link">Novo no site?
+                        <a href="cadastro.php" class="to_register"> Crie sua conta </a>
+                    </p>
+                </div>
+
                 <!-- FORGOT PASSWORD -->
                 <div id="forgot_password">
                     <a href="#">
@@ -63,15 +70,29 @@
                     </a>
                 </div>
             </div>
-        </div>
 
         <!-- LOGIN BUTTON -->
         <button type="submit" id="login_button" onclick="">Login</button>
-
     </form>
 </main>
 
 <!-- JAVASCRIPT -->
 <script type="text/javascript" src="/src/main/assets/js/script_login.js"></script>
+<script>
+    document.getElementById('toggleSenha').addEventListener('click', function() {
+        const senhaInput = document.getElementById('senha');
+        const eyeIcon = document.getElementById('eye-icon');
+
+        if (senhaInput.type === 'password') {
+            senhaInput.type = 'text';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        } else {
+            senhaInput.type = 'password';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        }
+    });
+</script>
 </body>
 </html>

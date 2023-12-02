@@ -4,12 +4,13 @@ switch ($_REQUEST["acao"]){
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
+    $nivel = $_POST["nivel"];
 
-    $sql = "INSERT INTO usuario (nome_usuario, email_usuario, senha_usuario) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO usuario (nome_usuario, email_usuario, senha_usuario, nivel_usuario) VALUES (?, ?, ?, ?)";
 
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("sss", $nome, $email, $senha);
+    $stmt->bind_param("ssss", $nome, $email, $senha, $nivel);
 
     $res = $stmt->execute();
 
@@ -29,11 +30,11 @@ switch ($_REQUEST["acao"]){
         $nivel = $_POST["nivel"];
         $id = $_REQUEST["id"];
 
-        $sql = "UPDATE usuario SET nome_usuario=?, email_usuario=?, senha_usuario=?, nivel_usuario=? WHERE id_usuario=?";
+        $sql = "UPDATE usuario SET nome_usuario = ?, email_usuario = ?, senha_usuario = ?, nivel_usuario = ? WHERE id_usuario = ?";
 
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param("sssii", $nome, $email, $senha, $nivel, $id);
+        $stmt->bind_param("ssssi", $nome, $email, $senha, $nivel, $id);
 
         $res = $stmt->execute();
 

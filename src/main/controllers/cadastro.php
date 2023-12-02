@@ -8,6 +8,7 @@
           crossorigin="anonymous"
           referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="/src/main/assets/css/style_login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Cadastro Pokebattle</title>
 </head>
 <body>
@@ -47,6 +48,12 @@
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineFormCheck" name="nivel" value="1" required>
+                        <label class="form-check-label" for="inlineFormCheck">
+                            Nivel 1
+                        </label>
                     </div>
                 </label>
             </div>
@@ -96,7 +103,7 @@
                         include("editar_usuario.php");
                         break;
                 default:
-                    print "<h1>Bem vindos!</h1>";
+                    print "<h1></h1>";
             }
             ?>
         </div>
