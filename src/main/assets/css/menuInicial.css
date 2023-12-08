@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.menu {
+    text-align: center;
+    border: 5px solid black; /* Define uma borda vermelha de 3px pontilhada */
+    padding: 100px;
+}
+
+.titulo {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.botao {
+    margin-bottom: 10px;
+}
+
+.botao button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 215px;
+}
+
+.botao button:hover {
+    background-color: #2980b9;
+}

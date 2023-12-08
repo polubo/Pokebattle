@@ -10,6 +10,7 @@ if(empty($_SESSION)){
     <meta charset="UTF-8">
     <title> Tela inicial | Pokebattle </title>
     <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/menuInicial.css">
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,8 +28,14 @@ if(empty($_SESSION)){
                 <span class="link_name">Dashboard</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Meu perfil</a></li>
+                <li><a class="link_name" href="#">Dashboard</a></li>
             </ul>
+        </li>
+        <li>
+        <a href="?page=game">
+            <i class='bx bx-play-circle' ></i>
+            <span class="link_name">Iniciar batalha</span>
+        </a>
         </li>
         <li>
             <div class="iocn-link">
@@ -54,12 +61,12 @@ if(empty($_SESSION)){
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Deck</a></li>
-                <li><a href="#">Meu deck</a></li>
-                <li><a href="#">Editar deck</a></li>
+                <li><a href="?page=deck">Meu deck</a></li>
+                <li><a href="?page=editar_Deck">Editar deck</a></li>
             </ul>
         </li>
         <li>
-            <a href="#">
+            <a href="?page=loja">
                 <i class='bx bx-store'></i>
                 <span class="link_name">Loja</span>
             </a>
@@ -77,7 +84,7 @@ if(empty($_SESSION)){
             </ul>
         </li>
         <li>
-            <a href="#">
+            <a href="?page=batalha">
                 <i class='bx bx-history'></i>
                 <span class="link_name">Batalhas</span>
             </a>
@@ -86,7 +93,7 @@ if(empty($_SESSION)){
             </ul>
         </li>
         <li>
-            <a href="#">
+            <a href="?page=configuração">
                 <i class='bx bx-cog' ></i>
                 <span class="link_name">Configurações</span>
             </a>
@@ -147,7 +154,25 @@ if(empty($_SESSION)){
                     break;
                 case "editar";
                     include("editar_usuario.php");
-                default:
+                    break;
+                    case "game";
+                    include("game.php");
+                    break;
+                    case"deck";
+                    include("Deck.php");
+                    break;
+                    case"editar_Deck";
+                    include("Editar_Deck.php");
+                    break;
+                    case"loja";
+                    include("Loja.php");
+                    break;
+                    case"batalha";
+                    include("Batalha.php");
+                    break;
+                    case"configuração";
+                    include("configuração.php");
+                    default:
                     print "<h1></h1>";
             }
             ?>

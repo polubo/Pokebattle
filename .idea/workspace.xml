@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b549b10-a6a1-4e93-84ff-1e1dadf82bdd" name="Changes" comment="Crud do usuario finalizado - acrescentar inner join e continuação do site">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/assets/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/imgs/body-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controllers/UsuarioDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/UsuarioDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controllers/cadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/cadastro.php" afterDir="false" />
+    <list default="true" id="0b549b10-a6a1-4e93-84ff-1e1dadf82bdd" name="Changes" comment="Mudança na dashboard, problemas com crud referente as chaves estrangeiras">
+      <change afterPath="$PROJECT_DIR$/src/main/assets/css/menuInicial.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/assets/imgs/1339105.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/assets/imgs/206292.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/assets/imgs/logo-nome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/Batalha.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/Deck.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/Editar_Deck.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/Loja.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/configuração.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/assets/imgs/hero-banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/assets/imgs/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controllers/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controllers/editar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/editar_usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controllers/listar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/listar_usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,9 +109,9 @@
       <recent name="C:\Users\lucas\Downloads\Pokebattle\src\main\java\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\assets\imgs" />
       <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\controllers" />
       <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main" />
-      <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\assets\imgs" />
       <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\views" />
       <recent name="C:\Users\lucas\OneDrive\Área de Trabalho\Pokebattle\src\main\controller" />
     </key>
@@ -157,7 +159,8 @@
       <workItem from="1701191563600" duration="26451000" />
       <workItem from="1701276484681" duration="15842000" />
       <workItem from="1701466654321" duration="17776000" />
-      <workItem from="1701485872738" duration="10633000" />
+      <workItem from="1701485872738" duration="10722000" />
+      <workItem from="1701987888306" duration="14061000" />
     </task>
     <task id="LOCAL-00001" summary="att">
       <option name="closed" value="true" />
@@ -223,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701293639877</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Mudança na dashboard, problemas com crud referente as chaves estrangeiras">
+      <option name="closed" value="true" />
+      <created>1701496944587</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701496944587</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +261,8 @@
     <MESSAGE value="Atualização referente a apresentacao" />
     <MESSAGE value="controllers revisar" />
     <MESSAGE value="Crud do usuario finalizado - acrescentar inner join e continuação do site" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crud do usuario finalizado - acrescentar inner join e continuação do site" />
+    <MESSAGE value="Mudança na dashboard, problemas com crud referente as chaves estrangeiras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudança na dashboard, problemas com crud referente as chaves estrangeiras" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
